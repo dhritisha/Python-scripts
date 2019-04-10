@@ -1,14 +1,14 @@
-class createlinkedlist:
+class createLinkedList:
     def __init__(self, node, next):
         self.node=node
         self.next=next
 
-nodeobj=createlinkedlist(1, None)
-head=nodeobj
+nodeObj=createLinkedList(1, None)
+head=nodeObj
 for i in range(2,6):
-    newnodeobj=createlinkedlist(i, None)
-    nodeobj.next=newnodeobj
-    nodeobj=newnodeobj
+    newNodeObj=createLinkedList(i, None)
+    nodeObj.next=newNodeObj
+    nodeObj=newNodeObj
 
 prev=head
 while prev.next != None:
@@ -30,7 +30,6 @@ while cur.next!=None:
     previous=cur
     cur=future
 
-cur=future
 cur.next=previous
 
 while cur.next!=None:
